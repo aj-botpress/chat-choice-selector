@@ -117,7 +117,7 @@ export default function ChatInterfaceForm() {
                   <RadioGroup
                     value={fabType}
                     onValueChange={(value) => setFabType(value as FabType)}
-                    className="space-y-3"
+                    className="grid grid-cols-2 gap-4"
                   >
                     <div className="flex items-center space-x-3 p-4 rounded-lg border border-border hover:bg-accent/30 transition-colors">
                       <RadioGroupItem value="default" id="default" className="text-primary" />
