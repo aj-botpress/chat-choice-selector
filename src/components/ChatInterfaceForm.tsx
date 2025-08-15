@@ -111,16 +111,16 @@ export default function ChatInterfaceForm() {
                   </RadioGroup>
 
                   {fabType === "default" && <div className="mt-4 p-4 bg-accent/20 rounded-lg border border-accent-foreground/20 animate-slide-up">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="font-medium text-accent-foreground">Default FAB Preview</h4>
-                          <p className="text-sm text-muted-foreground mt-1">
-                            A beautiful floating chat button will appear in the bottom-right corner
-                          </p>
-                        </div>
-                        <div className="relative">
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full shadow-[var(--shadow-soft)] flex items-center justify-center">
-                            <MessageCircle className="h-6 w-6 text-primary-foreground" />
+                      <div className="space-y-4">
+                        <h4 className="font-medium text-accent-foreground">Floating button image</h4>
+                        <div className="flex items-center justify-center p-6 bg-card rounded-lg border border-border">
+                          <div className="text-center space-y-2">
+                            <div className="w-12 h-12 bg-muted rounded mx-auto flex items-center justify-center">
+                              <MessageCircle className="h-6 w-6 text-muted-foreground" />
+                            </div>
+                            <Button variant="outline" className="text-sm">
+                              Use bot avatar
+                            </Button>
                           </div>
                         </div>
                       </div>
