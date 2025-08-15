@@ -23,9 +23,7 @@ export default function ChatInterfaceForm() {
       <Card className="w-full max-w-2xl shadow-[var(--shadow-medium)] border-border/50">
         <CardHeader className="space-y-1 pb-6">
           <CardTitle className="text-2xl font-semibold flex items-center gap-3 text-foreground">
-            <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-primary-dark">
-              <MessageCircle className="h-5 w-5 text-primary-foreground" />
-            </div>
+            
             Chat interface
           </CardTitle>
           <p className="text-muted-foreground">
@@ -89,10 +87,8 @@ export default function ChatInterfaceForm() {
                     <div className="flex items-center space-x-3 p-4 rounded-lg border border-border hover:bg-accent/30 transition-colors">
                       <RadioGroupItem value="default" id="default" className="text-primary" />
                       <Label htmlFor="default" className="flex-1 cursor-pointer">
-                        <div className="font-medium text-card-foreground">Default FAB</div>
-                        <div className="text-sm text-muted-foreground">
-                          Use our pre-designed floating action button
-                        </div>
+                        <div className="font-medium text-card-foreground">FAB</div>
+                        <div className="text-sm text-muted-foreground">Use the customizable floating action button</div>
                       </Label>
                     </div>
 
@@ -101,7 +97,7 @@ export default function ChatInterfaceForm() {
                       <Label htmlFor="custom" className="flex-1 cursor-pointer">
                         <div className="font-medium text-card-foreground flex items-center gap-2">
                           Custom Element
-                          <Palette className="h-4 w-4 text-muted-foreground" />
+                          
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Use your own custom button or element
@@ -111,16 +107,16 @@ export default function ChatInterfaceForm() {
                   </RadioGroup>
 
                   {fabType === "default" && <div className="mt-4 p-4 bg-accent/20 rounded-lg border border-accent-foreground/20 animate-slide-up">
-                      <div className="space-y-4">
-                        <h4 className="font-medium text-accent-foreground">Floating button image</h4>
-                        <div className="flex items-center justify-center p-6 bg-card rounded-lg border border-border">
-                          <div className="text-center space-y-2">
-                            <div className="w-12 h-12 bg-muted rounded mx-auto flex items-center justify-center">
-                              <MessageCircle className="h-6 w-6 text-muted-foreground" />
-                            </div>
-                            <Button variant="outline" className="text-sm">
-                              Use bot avatar
-                            </Button>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="font-medium text-accent-foreground">Default FAB Preview</h4>
+                          <p className="text-sm text-muted-foreground mt-1">
+                            A beautiful floating chat button will appear in the bottom-right corner
+                          </p>
+                        </div>
+                        <div className="relative">
+                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full shadow-[var(--shadow-soft)] flex items-center justify-center">
+                            <MessageCircle className="h-6 w-6 text-primary-foreground" />
                           </div>
                         </div>
                       </div>
