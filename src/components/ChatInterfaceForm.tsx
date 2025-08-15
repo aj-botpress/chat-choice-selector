@@ -109,9 +109,9 @@ export default function ChatInterfaceForm() {
                   {fabType === "default" && <div className="mt-4 p-4 bg-accent/20 rounded-lg border border-accent-foreground/20 animate-slide-up">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="font-medium text-accent-foreground">Default FAB Preview</h4>
+                          <h4 className="font-medium text-accent-foreground">Floating button image</h4>
                           <p className="text-sm text-muted-foreground mt-1">
-                            A beautiful floating chat button will appear in the bottom-right corner
+                            Choose how the floating button should look
                           </p>
                         </div>
                         <div className="relative">
@@ -120,6 +120,34 @@ export default function ChatInterfaceForm() {
                           </div>
                         </div>
                       </div>
+                      <div className="mt-4 flex gap-3">
+                        <Button variant="outline" size="sm" className="flex-1 relative">
+                          <input 
+                            type="file" 
+                            accept="image/*" 
+                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+                          />
+                          Upload Image
+                        </Button>
+                        <Button variant="outline" size="sm" className="flex-1">
+                          Use bot avatar
+                        </Button>
+                      </div>
+                    </div>}
+
+                  {fabType === "custom" && <div className="mt-4 p-4 bg-accent/20 rounded-lg border border-accent-foreground/20 animate-slide-up space-y-3">
+                      <Label htmlFor="customElementId" className="text-sm font-medium text-accent-foreground">
+                        Element ID
+                      </Label>
+                      <Input 
+                        id="customElementId" 
+                        type="text" 
+                        placeholder="e.g., open-chat-button" 
+                        className="h-10 bg-input/50 border-border focus:border-primary focus:ring-primary/20" 
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Enter the ID of the HTML element that will trigger the chat when clicked
+                      </p>
                     </div>}
                 </div>}
             </div>
